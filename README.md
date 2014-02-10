@@ -1,7 +1,7 @@
 koala-jade
 ==========
 
-A koala extension that adds support for compiling [jade](http://jade-lang.com/) files.  It's basically just a modified version of @zagraveyard's [Dust Compiler](https://github.com/zaygraveyard/koala-dust) for koala, so I can't take credit for much aside from getting it to work with [Jade](http://jade-lang.com/).
+A koala extension that adds support for compiling [jade](http://jade-lang.com/) files.  It's basically just a modified version of @zaygraveyard's [Dust Compiler](https://github.com/zaygraveyard/koala-dust) for koala, so I can't take credit for much aside from getting it to work with [Jade](http://jade-lang.com/).
 
 How to build
 ------------
