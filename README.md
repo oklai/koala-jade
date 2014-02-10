@@ -23,5 +23,5 @@ Drag-n-Drop `jade.koala-compiler` on the Koala application window.  If all goes 
 
 Todo
 ----
-  * _pretty_ html output is only enabled on the bundled version of jade at the moment.  I plan to get it enabled on the command-line version soon.
-  * very willing to hear other ideas on what people would like to see incorporated into the extension.
+  * The _pretty_ html output option is only working on the bundled version of jade at the moment.  I plan to get it working on the command-line version soon.
+  * Very willing to hear other ideas on what people would like to see incorporated into the extension.
