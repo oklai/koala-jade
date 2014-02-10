@@ -1,0 +1,72 @@
+{
+	"name": "jade",
+	"display": "Jade",
+	"description": "A koala extension that adds support for compiling jade file.",
+	"keywords": [ "koala", "jade", "compiler"],
+	"version": "1.0.0",
+	"koalaVersion": ">=2.0.0",
+	"main": "JadeCompiler.js",
+
+	"bugs": {
+		"url": "https://github.com/gaberankin/koala-jade/issues"
+	},
+	"author": {
+		"name": "Gabe Rankin",
+		"web": "https://github.com/gaberankin"
+	},
+	"contributors": [
+	],
+	"maintainers": {
+		"name": "Gabe Rankin",
+		"project": "https://github.com/gaberankin/koala-jade"
+	},
+	"dependencies": {
+		"jade": ">=1.1.5"
+	},
+	"engines": {
+		"koala": ">=2.0.0"
+	},
+	"licenses": [{
+		"type": "Apache 2.0",
+		"url": "http://www.apache.org/licenses/LICENSE-2.0"
+	}],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/oklai/koala.git"
+	},
+
+	"fileTypes": [{
+		"extension": "jade", 
+		"output": "html",
+		"icon": "jade.png",
+		"category": "template"
+	}],
+
+	"options": [
+		{
+			"type": "checkbox",
+			"name": "prettyHtml",
+			"display": "Format HTML with whitespace",
+			"default": false
+		}
+	],
+
+	"advanced": [
+		{
+			"type": "checkbox",
+			"name": "useCommand",
+			"display": "Use the System Jade compiler",
+			"default": false
+		},
+		{
+			"type": "text",
+			"name": "commandPath",
+			"display": "Use the Jade executable at this path",
+			"default": "",
+			"placeholder": "Default: jade",
+			"depend": "useCommand"
+		}
+	],
+
+	"libraries": ["Jade@1.1.5"]
+}
