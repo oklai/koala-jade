@@ -9,7 +9,7 @@ How to build
 1. run `npm install`.
 2. create a zip file.
 3. add, to the zip, all files:
-    * node_mudules
+    * node_modules
     * jade.png
     * JadeCompiler.js
     * LICENSE
