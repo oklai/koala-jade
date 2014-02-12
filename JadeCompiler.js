@@ -47,7 +47,7 @@ JadeCompiler.prototype.compile = function (file, emitter) {
 	} else {
 		this.compileWithLib(file, emitter);
 	}
-}
+};
 
 /**
  * compile jade file with node lib
@@ -66,7 +66,7 @@ JadeCompiler.prototype.compileWithLib = function (file, emitter) {
 		emitter.emit('always');
 
 		self.throwError(message, filePath);
-	}
+	};
 
 	//read code content
 	fs.readFile(filePath, 'utf8', function (rErr, code) {
@@ -77,7 +77,7 @@ JadeCompiler.prototype.compileWithLib = function (file, emitter) {
 
 		var html;
 		try {
-			var options = {}
+			var options = {};
 			if(settings.prettyHtml) {
 				options.pretty = settings.prettyHtml;
 			}
@@ -109,13 +109,15 @@ JadeCompiler.prototype.compileWithCommand = function (file, emitter) {
 		self         = this,
 		filePath     = file.src,
 		output       = file.output,
-		compressOpts = {},
-
+		settings = file.settings || {},
 		argv = [
-		'-n="' + path.basename(filePath, '.jade') + '"',
-		'"' + filePath + '"',
-		'"' + output + '"'
+		'< "' + filePath + '"',
+		'> "' + output + '"'
 		];
+
+	if(settings.prettyHtml) {
+		argv = ['--pretty'].concat(argv);
+	}
 
 	var globalSettings  = this.getGlobalSettings(),
 		jadePath = globalSettings.advanced.commandPath || 'jade';
